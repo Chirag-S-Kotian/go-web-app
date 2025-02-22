@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: gojo
+  labels:
+    app: gojo
+spec:
+  ports:
+    - port: 80
+      targetPort: 8070
+      protocol: TCP
+  selector:
+    app: gojo
+    type: ClusterIP
