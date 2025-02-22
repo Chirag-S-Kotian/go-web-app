@@ -8,7 +8,7 @@ image:
   repository: abhishekf5/gojo
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "13474987806"
+  tag: "13475173811"
 
 ingress:
   enabled: false
