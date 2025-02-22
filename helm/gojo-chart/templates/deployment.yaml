@@ -1,0 +1,22 @@
+# This is a sample deployment manifest file for a simple web application.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gojo
+  labels:
+    app: gojo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gojo
+  template:
+    metadata:
+      labels:
+        app: gojo
+    spec:
+      containers:
+      - name: gojo
+        image: chirag117/gojo:{{ .Values.image.tag }}
+        ports:
+        - containerPort: 8070
