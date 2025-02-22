@@ -1,3 +1,4 @@
+# This is a sample deployment manifest file for a simple web application.
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -19,16 +20,3 @@ spec:
         image: chirag117/gojo:v1
         ports:
         - containerPort: 8070
-        resources:
-          limits:
-            cpu: "0.5"
-            memory: "512Mi"
-          requests:
-            cpu: "0.2"
-            memory: "256Mi"
-        livenessProbe:
-          httpGet:
-            path: /health
-            port: 8070
-          initialDelaySeconds: 5
-          periodSeconds: 10

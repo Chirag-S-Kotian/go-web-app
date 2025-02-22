@@ -11,4 +11,4 @@ spec:
       protocol: TCP
   selector:
     app: gojo
-    type: ClusterIP
+  type: NodePort
